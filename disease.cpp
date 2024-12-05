@@ -1,5 +1,5 @@
-#include <iostream>;
-#include <string>;
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -25,11 +25,12 @@ public:
     }
 };
 
-int main()
-{
-    Disease d;
-    d.getDiseaseDetail();
-    d.showDiseaseDetail();
+// For testing purposes
+//  int main()
+//  {
+//      Disease d;
+//      d.getDiseaseDetail();
+//      d.showDiseaseDetail();
 
-    return 0;
-}
+//     return 0;
+// }
