@@ -12,38 +12,38 @@ private:
 public:
     void getPersonData()
     {
-        cout << "Enter name: ";
+        cout << "Enter name : ";
         cin >> name;
 
-        cout << "Enter age: ";
+        cout << "Enter age : ";
         cin >> age;
 
-        cout << "Enter phone number: ";
+        cout << "Enter phone number : ";
         cin >> phoneNo;
 
-        cout << "Enter address: ";
+        cout << "Enter address : ";
         cin >> address;
 
-        cout << "Enter email: ";
+        cout << "Enter email : ";
         cin >> email;
     }
 
     void showPersonData()
     {
-        cout << "Name: " << name << endl;
-        cout << "Age: " << age << endl;
-        cout << "Phone number: " << phoneNo << endl;
-        cout << "Address: " << address << endl;
-        cout << "Email: " << email << endl;
+        cout << "Name : " << name << endl;
+        cout << "Age : " << age << endl;
+        cout << "Phone number : " << phoneNo << endl;
+        cout << "Address : " << address << endl;
+        cout << "Email : " << email << endl;
     }
 };
 
 // For testing purposes
- int main(){
-     Person p1;
+//  int main(){
+//      Person p1;
 
-    p1.getPersonData();
-    p1.showPersonData();
+//     p1.getPersonData();
+//     p1.showPersonData();
 
-    return 0;
-}
+//     return 0;
+// }
