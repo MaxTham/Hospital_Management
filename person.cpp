@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 
@@ -10,40 +11,43 @@ private:
     char name[25], address[25], email[25], phoneNo[25];
 
 public:
+    // getting person information
     void getPersonData()
     {
-        cout << "Enter name : ";
-        cin >> name;
-
-        cout << "Enter age : ";
+        cout << "Enter age: ";
         cin >> age;
-
-        cout << "Enter phone number : ";
+        cout << "Enter phone number: ";
+        // cin.get();// very usefull while using getline multiple times
         cin >> phoneNo;
 
-        cout << "Enter address : ";
+        cout << "Enter name: ";
+        // cin.get();
+        cin >> name;
+
+        cout << "Enter address: ";
+        // cin.get();
         cin >> address;
 
-        cout << "Enter email : ";
+        cout << "Enter email address: ";
         cin >> email;
     }
 
+    // displaying person information
     void showPersonData()
     {
-        cout << "Name : " << name << endl;
-        cout << "Age : " << age << endl;
-        cout << "Phone number : " << phoneNo << endl;
-        cout << "Address : " << address << endl;
-        cout << "Email : " << email << endl;
+        cout << "Age: " << age << endl;
+        cout << "Phone number: " << phoneNo << endl;
+        cout << "Name: " << name << endl;
+        cout << "Address: " << address << endl;
+        cout << "Email address: " << email << endl;
     }
 };
 
-// For testing purposes
-//  int main(){
-//      Person p1;
-
-//     p1.getPersonData();
-//     p1.showPersonData();
-
+// for testing porpose only
+// int main()
+// {
+//     Person person;
+//     person.getPersonData();
+//     person.showPersonData();
 //     return 0;
 // }

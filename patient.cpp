@@ -1,3 +1,4 @@
+
 #include "person.cpp"
 #include "disease.cpp"
 #include <fstream>
@@ -46,7 +47,7 @@ public:
         cout << "\n\n\t\t---- PATIENT DATA ----" << endl;
         cout << "Patient Id: " << patientId << endl;
         showPersonData();
-        disease.showDiseaseDetail();
+        disease.showDiseaseList();
         cout << "Appointment date: " << appointDate << endl;
     }
 
@@ -166,45 +167,39 @@ public:
             cout << "Enter option 4 to edit patient's data " << endl;
             cout << "Enter option 5 to exit program " << endl;
             cin >> choice;
-
-            switch (choice)
+            if (choice == 1)
             {
-            case 1:
                 do
                 {
-                    addPatient();
-                    cout << "Add another patient? Enter '1' for yes, any other key to stop: ";
-                    cin >> flag;
-                } while (flag == '1'); // Ensure flag is checked correctly for character input
-                break;
-            case 2:
-                showPatientDataFromFile();
-                break;
-            case 3:
-                dischargePatient();
-                break;
-            case 4:
-                editPatient();
-                break;
-            case 5:
-                cout << "Exiting the program. Goodbye!" << endl;
-                break;
-            default:
-                cout << "Invalid choice. Please try again." << endl;
-            }
 
-        } while (choice != 5); // Exit loop when the user selects option 5
+                    addPatient();
+                    cout << "add another patient ? 1 for yes ";
+                    cin >> flag;
+
+                } while (flag == 1);
+            }
+            else if (choice == 2)
+            {
+                showPatientDataFromFile();
+            }
+            else if (choice == 3)
+            {
+                dischargePatient();
+            }
+            else if (choice == 4)
+            {
+                editPatient();
+            }
+        } while (choice == 1 | choice == 2 | choice == 3 | choice == 4);
     }
 };
 
-// for testing purpose
-// int main()
-// {
+// int main() {
 //     patient p;
-//     p.addPatient();
-//     p.showPatientDataFromFile();
-//     p.dischargePatient();
-//     p.editPatient();
+//     // p.addPatient();
+//     // p.showPatientDataFromFile();
+//     // p.dischargePatient();
+//     // p.editPatient();
 
 //     p.doPatientRelatedWork();
 

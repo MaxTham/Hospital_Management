@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 
@@ -6,31 +7,34 @@ using namespace std;
 class Disease
 {
 private:
-    char diseaseName[25], virusName[25];
+    char diseaseName[25];
+    char virusName[25];
 
 public:
+    // getting information of disease from user
     void getDiseaseDetail()
     {
-        cout << "Enter disease name : ";
+
+        cout << "Enter the name of disease: ";
+        // gets(diseaseName);
         cin >> diseaseName;
 
-        cout << "Enter Virus name : ";
+        cout << "Enter the name of virus/bacteria: ";
         cin >> virusName;
     }
-    void showDiseaseDetail()
+
+    // show disease list
+    void showDiseaseList()
     {
         cout << endl;
-        cout << "*** Disease : " << diseaseName << " ***" << endl;
-        cout << "Virus name : " << virusName << endl;
+        cout << "*** Disease: " << diseaseName << " ***" << endl;
+        cout << "Virus/Bacteria: " << virusName << endl;
     }
 };
 
-// For testing purposes
-//  int main()
-//  {
-//      Disease d;
-//      d.getDiseaseDetail();
-//      d.showDiseaseDetail();
-
+// int main() {
+//     Disease d;
+//     d.getDiseaseDetail();
+//     d.showDiseaseList();
 //     return 0;
 // }
